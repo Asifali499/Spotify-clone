@@ -1,0 +1,52 @@
+.border{
+  /* border : 0.5px solid red; */
+  /* margin: 1.3px;  */
+  box-sizing: border-box; 
+
+}
+
+.flex{
+  display: flex;
+}
+
+.justify-center{
+  justify-content: center;
+
+}
+.item-center{
+  align-items: center;
+}
+.images{
+  /* align-items: center; */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  /* height: 500px;s */
+}
+
+
+/* For Chrome, Edge, and other WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #535353;
+    border: 3px solid #121212;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #535353 #121212;
+}

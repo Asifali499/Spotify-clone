@@ -1,0 +1,456 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+
+}
+
+body {
+  background-color: black;
+}
+
+.header {
+  background-color: black;
+  padding: 19px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.headerlogin {
+  margin-top: 10px;
+  margin-right: 1px;
+  background-color: white;
+  color: black;
+
+  /* border: none; */
+  border-radius: 50px;
+
+  padding: 10px 15px;
+
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+
+  cursor: pointer;
+  /* white-space: nowrap; */
+
+  transition: transform 0.2s ease;
+}
+
+.installnav {
+  color: white;
+  background-color: black;
+  border: none;
+
+}
+
+.signnav {
+  color: white;
+  background-color: black;
+  border: none;
+  margin: 2px;
+}
+
+.ele {
+  gap: 20PX;
+  display: flex;
+  width: 20px;
+  list-style: none;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.left {
+  background-color: black;
+
+
+  position: fixed;
+  top: 70px;
+  left: 5px;
+  bottom: 80px;
+  width: 20%;
+  overflow: hidden;
+  border-radius: 15px;
+
+
+}
+
+.leftbox1 {
+  height: 60vh;
+  /* display: flex; */
+  /* overflow: scroll; */
+  background-color: #1f1f1f;
+  /* object-fit: contain; */
+  
+}
+@media screen and (width: 440px) and (height: 956px) {
+    .leftbox1 {
+        height: 64vh;
+    }
+
+  }
+
+.library {
+  
+  
+  margin: 2px;
+  border: 2px solid transparent;
+    border-radius: 10px;
+    background: 
+        linear-gradient(#121212, #121212) padding-box,
+        linear-gradient(to right, #28ae2f, #cbd6e4) border-box;
+ 
+  display: flex;
+
+  font-weight: bolder;
+  font-size: 16px;
+  padding: 12px;
+  justify-content: space-between;
+}
+
+
+.plussign {
+  width: 8px;
+  height: 8px;
+  /* position: fixed; */
+
+}
+
+
+.plusButton {
+  /* margin-top: 5px; */
+  /* margin-right: 10px; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #998d8d;
+  cursor: pointer;
+  /* position: fixed; */
+
+}
+
+
+
+.songlist{
+  max-width: 100%;
+  max-height: 420px;
+  overflow: scroll;
+
+/* and (min-width: 440px) and (max-width: 600px) 
+              and (min-height: 956px) and (max-height: 1200px)  */
+}
+
+@media screen and (min-width: 440px) and (max-width: 2200px) and (min-height: 900px) and (max-height: 1200px) {
+    .songlist {
+        max-height: 900px;
+    }
+
+}
+
+
+/* Smooth animation for every song */
+.songlist li {
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Currently playing song */
+.songlist li.playing {
+    background: linear-gradient(to right, #1b3b2a, #202020);
+    border: 1px solid #1ed760;
+    border-radius: 8px;
+    animation: songGlow 2s ease-in-out infinite alternate;
+}
+
+/* Green song name */
+.songlist li.playing .songName {
+    color: #1ed760;
+}
+
+/* Animate the music icon */
+.songlist li.playing .futureliImg:first-child {
+    animation: musicBounce 0.6s ease-in-out infinite alternate;
+}
+
+/* Subtle glowing effect */
+@keyframes songGlow {
+    from {
+        box-shadow: 0 0 2px rgba(30, 215, 96, 0.1);
+    }
+
+    to {
+        box-shadow: 0 0 10px rgba(30, 215, 96, 0.35);
+    }
+}
+
+/* Music icon movement */
+@keyframes musicBounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-3px);
+    }
+}
+
+
+
+
+
+.songlist ul {
+    list-style: none;
+    /* padding: 5px 4px; */
+    /* margin: 10px; */
+}
+.futureliImg1{
+  filter: invert(1);
+  /* margin-right: 20px; */
+}
+
+
+.futureliImg{
+  padding: 5px;
+  display: flex;
+  filter: invert(1);
+  /* margin: 5px; */
+}
+.future{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+    margin: 10px 0px;
+
+  border: 2px solid transparent;
+    border-radius: 10px;
+    background: 
+        linear-gradient(#121212, #121212) padding-box,
+        linear-gradient(to right, #28ae2f, #cbd6e4) border-box;
+
+
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+
+
+
+
+
+.leftbox3 {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #1f1f1f;
+  overflow-y: auto;
+  position: absolute;
+}
+
+.leftbox3 ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 4px;
+  /* color: grey; */
+  height: 15vh;
+
+}
+
+.right {
+
+  border-radius: 15px;
+  position: fixed;
+  top: 70px;
+  left: calc(20% + 15px);
+  
+
+  /* overflow-y: auto; */
+  overflow-x: auto;
+  background-color: #111010;
+ 
+  
+}
+
+.rightBoxHeader {
+
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  /* background-color: #26040a; */
+  padding-top: 20px;
+
+}
+
+
+
+.cardContainer {
+  padding: 5px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  overflow-y :scroll;
+  /* overflow-y: scroll; */
+  max-height: 80vh;
+  /* max-width: 200vh; */
+
+}
+
+.card {
+ 
+  align-items: center;
+  padding: 5px;
+  width: 160px;
+  /* height: 160px; */
+  background-color: #111010;
+  
+  position: relative;
+
+}
+
+.play-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1ed760;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  position: absolute;
+  top: 109px;
+  right: 9px;
+  opacity: 1;
+}
+
+.play-button svg {
+  width: 24px;
+  height: 24px;
+  fill: black;
+}
+
+.play-button:hover {
+  transform: scale(1.06);
+  background-color: #3be477;
+}
+
+
+
+.lastfooter {
+  border-radius: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  background: linear-gradient(to right, #AE2896, #509BF5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+/* .play{
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  
+} */
+
+/* Container for player buttons */
+.play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Common button styling */
+.play button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+/* Previous and Next buttons */
+.prevB img,
+.nextB img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+/* Play button */
+.playB {
+    width: 48px;
+    height: 48px;
+    background-color: #1ed760 !important;
+    border-radius: 50%;
+}
+
+.playB img {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0);
+}
+
+/* Hover effects */
+.play button:hover {
+    transform: scale(1.1);
+}
+
+.playB:hover {
+    background-color: #3be477 !important;
+}
+
+.footersignup {
+  margin: 3px;
+  background-color: white;
+  color: black;
+
+  border: none;
+  border-radius: 50px;
+
+  padding: 15px 26px;
+
+  font-size: 12px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: transform 0.2s ease;
+}
+
+.signup-btn:hover {
+  transform: scale(1.04);
+}
